@@ -15,13 +15,18 @@
 # Inherit from those raphael device.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit some common EternityOS stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 FACE_UNLOCK_SUPPORTED := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP := true
+
+#Official
+CUSTOM_BUILD_TYPE := OFFICIAL
+ETERNITY_MAINTAINER := xdsolraC
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_raphael
